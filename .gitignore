@@ -1,0 +1,91 @@
+# API Keys and Secrets
+*.key
+*.pem
+**/config.json
+config.json
+api_keys.txt
+secrets.txt
+.env
+.env.local
+
+# Scan Output Files
+*.csv
+ADS_Report_*
+*_scan_*.csv
+
+# Cache and Logs
+cache/
+logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+results_cache.json
+
+# Quarantine/Extraction Directories
+quarantine/
+extracted_streams/
+extraction_manifest.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+
+# Test files
+test_*.py
+*_test.py
+test_output/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Local configuration that shouldn't be shared
+%LOCALAPPDATA%/ADSScanner/

@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:hybrid-analysis.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.limacharlie.io)",
+      "WebFetch(domain:help.logichub.com)",
+      "Bash(python test_otx_key.py:*)",
+      "Bash(python -c \"from api_clients import AlienVaultOTXAPI; api = AlienVaultOTXAPI\\(''9245449193a2fa202e9c45c889ffc7bc07c095e46d7b8a5dfb422af14369fce2''\\); result = api.lookup_hash\\(''275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f''\\); print\\(''Result type:'', type\\(result\\)\\); print\\(''Result is None:'', result is None\\); print\\(''Result:'', result\\)\")",
+      "Bash(python -c \"from api_clients import AlienVaultOTXAPI; api = AlienVaultOTXAPI\\(''9245449193a2fa202e9c45c889ffc7bc07c095e46d7b8a5dfb422af14369fce2''\\); result = api.lookup_hash\\(''275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f''\\); print\\(''Result:'', result\\)\")",
+      "Bash(python -c \"from config_manager import ConfigManager; cm = ConfigManager\\(\\); cm.load_config\\(\\) if cm.config_exists\\(\\) else cm.initialize\\(\\); result = cm.test_api_key\\(''alienvault_otx'', ''9245449193a2fa202e9c45c889ffc7bc07c095e46d7b8a5dfb422af14369fce2''\\); print\\(''Test Result:'', result\\)\")",
+      "Bash(python scan_ads_vt.py:*)",
+      "Bash(python api_key_manager.py:*)",
+      "Bash(python:*)",
+      "Bash(grep:*)",
+      "Bash(for file in README.md README_VT.md IMPLEMENTATION_SUMMARY.md QWEN.md)",
+      "Bash(do sed -i 's/scan_ads_vt\\\\.py/scan_ads.py/g' \"$file\")",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git config:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(cd \"D:\"\" && ls -la | grep -E \"^d.*ADS \")",
+      "Bash(git mv:*)",
+      "Bash(git reset:*)",
+      "Bash(git restore:*)"
+    ]
+  }
+}
