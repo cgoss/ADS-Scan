@@ -46,13 +46,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import ctypes
 from ctypes import wintypes
 
-# Import new modules
+# Import modules from package
 try:
-    from config_manager import ConfigManager
-    from api_clients import VirusTotalAPI, HybridAnalysisAPI
-    from key_rotator import APIKeyRotator
-    from cache_manager import CacheManager
-    from export_formats import (
+    from .config_manager import ConfigManager
+    from .api.clients import VirusTotalAPI, HybridAnalysisAPI
+    from .key_rotator import APIKeyRotator
+    from .cache.cache_manager import CacheManager
+    from .export.formats import (
         export_to_csv, export_to_json, export_to_html, export_to_stix,
         calculate_combined_risk
     )

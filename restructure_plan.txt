@@ -1,0 +1,49 @@
+Current structure issues:
+- All files in root directory (messy)
+- No separation between source code, docs, tests, scripts
+- PowerShell files mixed with Python files
+- Utility scripts mixed with main code
+
+New structure (industry standard):
+ADS-Scan/
+├── .github/                    # GitHub workflows, issue templates
+├── .gitignore
+├── LICENSE
+├── README.md
+├── docs/                       # All documentation
+│   ├── user-guide/
+│   │   ├── getting-started.md
+│   │   ├── api-key-management.md
+│   │   ├── extraction-feature.md
+│   │   └── resume-feature.md
+│   ├── developer-guide/
+│   │   ├── architecture.md
+│   │   └── contributing.md
+│   └── changelog.md
+├── src/                        # Python source code
+│   └── ads_scanner/
+│       ├── __init__.py
+│       ├── scanner.py         # Main scanner logic
+│       ├── config_manager.py
+│       ├── api/              # API clients
+│       │   ├── __init__.py
+│       │   ├── virustotal.py
+│       │   ├── hybrid_analysis.py
+│       │   └── ...
+│       ├── cache/            # Caching
+│       │   ├── __init__.py
+│       │   └── cache_manager.py
+│       └── export/           # Export formats
+│           ├── __init__.py
+│           └── formats.py
+├── powershell/                # PowerShell implementation
+│   ├── ADS-Scanner.ps1       # Main script
+│   └── modules/
+│       ├── ADSCache.ps1
+│       └── ADSExportFormats.ps1
+├── scripts/                   # Utility scripts
+│   ├── diagnose_keys.py
+│   ├── remove_broken_keys.py
+│   └── api_key_manager.py
+├── tests/                     # Test files
+└── examples/                  # Example usage scripts

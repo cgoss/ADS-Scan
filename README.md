@@ -3,11 +3,13 @@
 ---
 **📚 Documentation Navigation**
 - 🏠 **[Main README](README.md)** ← You are here
-- 🆕 **[What's New in v2.1](WHATS_NEW.md)** - Latest updates and changelog
-- 🔑 **[API Key Management](API_KEY_MANAGEMENT.md)** - Configure and manage API keys
-- 📦 **[Extraction & Quarantine](EXTRACTION_FEATURE.md)** - Extract suspicious streams for analysis
-- ⏭️ **[Resume Feature](RESUME_FEATURE.md)** - Resume interrupted scans
-- 🏗️ **[Developer Guide](CLAUDE.md)** - Architecture and development documentation
+- 📖 **[Getting Started](docs/user-guide/getting-started.md)** - Quick start guide
+- 🔑 **[API Key Management](docs/user-guide/api-key-management.md)** - Configure API keys
+- 📦 **[Extraction Feature](docs/user-guide/extraction-feature.md)** - Quarantine suspicious streams
+- ⏭️ **[Resume Feature](docs/user-guide/resume-feature.md)** - Resume interrupted scans
+- 📋 **[Changelog](docs/changelog.md)** - What's new in v2.1
+- 🏗️ **[Architecture](docs/developer-guide/architecture.md)** - Developer documentation
+- 🤝 **[Contributing](docs/developer-guide/contributing.md)** - How to contribute
 ---
 
 
@@ -24,6 +26,20 @@ Alternate Data Streams (ADS) are a feature of the Windows NTFS file system that 
 - **Exfiltrate data** by concealing sensitive information
 
 This tool helps security professionals, system administrators, and forensic analysts discover and analyze these hidden streams.
+
+## ⚡ Quick Start
+
+```bash
+# Clone and run
+git clone https://github.com/cgoss/ADS-Scan.git
+cd ADS-Scan
+python ads-scan.py --setup
+
+# First scan
+python ads-scan.py C:\Users\YourName\Downloads --use-config
+```
+
+See **[Getting Started Guide](docs/user-guide/getting-started.md)** for detailed instructions.
 
 ## 🚀 Key Features
 
